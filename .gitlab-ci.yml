@@ -1,0 +1,14 @@
+run_tests:
+  image: python:latest
+  before_script:
+    # ...
+  script:
+    - python3 -m ensurepip
+    - pip -V
+    - python3 -m pip -V
+    - python3 -m venv venv
+    - source venv/bin/activate
+    - pip install -e ".[testing]"
+    - pytest tests
+    - mypy src tests
+    - flake8 src tests
