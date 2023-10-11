@@ -19,7 +19,6 @@ def error_exit(code: int, reason: str) -> NoReturn:
 
 # The directory where everything lives in.
 working_dir_location = Path(os.path.dirname(__file__), "resources")
-os.makedirs(working_dir_location, exist_ok=True)
 
 # A constant to detect if you are on Linux.
 is_linux = platform.system() == "Linux"
@@ -67,7 +66,7 @@ def db_make_postgres_url(user: str, pw: str, db_name: str) -> str:
 sqlite_database_name = "state.db"
 database_url = db_make_sqlite_url(sqlite_database_name)
 
-# If set to True all the SQL is echo'd back
+# If set to True all emitted SQL is echo'd back
 database_verbose_sql = False
 
 # -/- Database Configuration ---

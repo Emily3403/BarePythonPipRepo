@@ -12,6 +12,7 @@ Getting started is quite easy:
 
 1. Clone this repository
 2. Replace all instances of `myproject` with the actual name of your project
+   - Note that if your project name contains a hyphen (`-`), you will need to replace all hyphens in the code with underscores (`_`). To do so, you can wildcard-replace all `from myprojet` with your desired name with underscores.
 3. Rename the `src/myproject` directory to `src/{actual_name}`
 4. Fill the required information for all the TODOs
 5. Upload it to the new repository
